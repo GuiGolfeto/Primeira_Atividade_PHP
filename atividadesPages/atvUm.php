@@ -3,21 +3,17 @@
 	if (isset($_POST['ano'])){
 		$ano = filter_input(INPUT_POST, 'ano');
 
-		function verificaAnoBisexto ($ano) {
-			// O ano divisível por 400 é sempre bissexto
-			if ($ano % 400 == 0){
-				echo  "<script>alert('É bissexto!');</script>";
-			}
-			
-			// O ano deve ser divisível por 4 mas não pode ser divisível por 100
-			if ($ano % 4 == 0 && $ano % 100 != 0){
-				echo  "<script>alert('É bissexto!');</script>";
-			}else {
-				echo "<script>alert('Não é bissexto!');</script>";
-			}			
-		  }
+		// O ano divisível por 400 é sempre bissexto
+		if ($ano % 400 == 0){
+			echo  "<script>alert('É bissexto!');</script>";
+		}
 
-		  return verificaAnoBisexto($ano);
+		// O ano deve ser divisível por 4 mas não pode ser divisível por 100
+		if ($ano % 4 == 0 && $ano % 100 != 0){
+			echo  "<script>alert('É bissexto!');</script>";
+		}else {
+			echo "<script>alert('Não é bissexto!');</script>";
+		}			
 	}
 
 ?>
